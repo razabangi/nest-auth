@@ -32,6 +32,12 @@ export class UserService
         });
     }
 
+    findByEmail(email: string) {
+        return this.userRepository.findOne({
+            where: {email}
+        });
+    }
+
     create(req: CreateUserDto) {
         return this.userRepository.save(req);
     }
