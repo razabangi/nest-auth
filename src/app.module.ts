@@ -5,9 +5,10 @@ import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entity/user.entity';
 import { AuthModule } from './auth/auth.module';
+import { ProfileModule } from './profile/profile.module';
 
 @Module({
-  imports: [UserModule, AuthModule, TypeOrmModule.forRoot({
+  imports: [UserModule, AuthModule, ProfileModule, TypeOrmModule.forRoot({
     type: 'mysql',
     host: '127.0.0.1',
     port: 3306,
